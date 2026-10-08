@@ -24,7 +24,7 @@ För JavaScript fick jag hjälp med att göra beställningsknappen interaktiv. J
 
 Jag använde även AI som hjälp när jag råkade ta bort några viktiga Git-commits. Med hjälp av AI lärde jag mig att använda `git reflog`, `git show` och `git diff` för att hitta tidigare versioner av mina filer.
 
-Genom detta kunde jag hitta en tidigare version av `index.html` och `style.css` och återställa de delar som jag hade råkat ta bort.
+Genom detta kunde jag hitta en tidigare version av `index.html` och `style.css` och återställa de delar som jag hade råkat ta bort. 
 
 ## Tekniska val
 
