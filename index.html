@@ -175,6 +175,9 @@
     <main class="main-content">
 
 
+        <div class="top-bar">
+        
+
         <!-- Sökfält -->
         <div class="search-bar">
 
@@ -186,6 +189,25 @@
                 placeholder="Sök..."
                 aria-label="Sök produkter"
             >
+
+        </div>
+
+        <!-- Varukorg -->
+        <div class="varukorg">
+            <i class="fas fa-shopping-cart"></i>
+
+            <div class="order-box">
+                
+                <button class="close-order" aria-label="Stäng">
+                    <i class="fas fa-xmark"></i>
+                </button>
+
+                <h3>Dina beställningar</h3>
+
+                <p>Du har inga beställningar ännu.</p>
+            </div>
+
+        </div>
 
         </div>
 
@@ -355,11 +377,13 @@
 
         </section>
 
-    </main>
-
-    <footer>
+        <footer>
         <p>&copy; 2024 Suit Kläder. Alla rättigheter förbehållna.</p>
     </footer>
+
+    </main>
+
+   
 
 
     <!-- JavaScript -->
