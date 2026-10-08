@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!-- Dokumentinställningar -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sidans titel -->
+    <title>Suit Kläder</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome ikoner -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         SIDEBAR
+    ================================= -->
+
+    <aside class="sidebar">
+
+        <!-- Logotyp -->
+        <div class="logo">
+            <i class="fas fa-user"></i>
+            Suit kläder
+        </div>
+
+
+        <!-- Overlay för mobilmenyn (Mörkare bakgrund) -->
+        <div class="menu-overlay"></div>
+
+
+        <!-- Kategorimeny -->
+        <nav class="nav-menu" aria-label="Produktkategorier">
+
+            <!-- Skor -->
+            <div class="category-item">
+
+                <a href="#">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                    Skor
+                </a>
+
+                <div class="category-panel">
+
+                    <button class="close-panel" aria-label="Stäng meny">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <h3>Skor</h3>
+
+                    <a href="#">Alla skor</a>
+                    <a href="#">Finskor</a>
+                    <a href="#">Loafers</a>
+                    <a href="#">Sneakers</a>
+                    <a href="#">Kängor</a>
+
+                </div>
+            </div>
+
+
+            <!-- Kostym -->
+            <div class="category-item">
+
+                <a href="#">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Kostym
+                </a>
+
+                <div class="category-panel">
+
+                    <button class="close-panel" aria-label="Stäng meny">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <h3>Kostym</h3>
+
+                    <a href="#">Alla kostymer</a>
+                    <a href="#">Svarta kostymer</a>
+                    <a href="#">Blå kostymer</a>
+                    <a href="#">Slim fit</a>
+                    <a href="#">Regular fit</a>
+
+                </div>
+            </div>
+
+
+            <!-- Skjortor -->
+            <div class="category-item">
+
+                <a href="#">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Skjortor
+                </a>
+
+                <div class="category-panel">
+
+                    <button class="close-panel" aria-label="Stäng meny">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <h3>Skjortor</h3>
+
+                    <a href="#">Alla skjortor</a>
+                    <a href="#">Vita skjortor</a>
+                    <a href="#">Svarta skjortor</a>
+                    <a href="#">Businesskjortor</a>
+                    <a href="#">Slim fit</a>
+
+                </div>
+            </div>
+
+
+            <!-- Finstrumpor -->
+            <div class="category-item">
+
+                <a href="#">
+                    <i class="fa-solid fa-socks"></i>
+                    Finstrumpor
+                </a>
+
+                <div class="category-panel">
+
+                    <button class="close-panel" aria-label="Stäng meny">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <h3>Finstrumpor</h3>
+
+                    <a href="#">Alla strumpor</a>
+                    <a href="#">Svarta strumpor</a>
+                    <a href="#">Vita strumpor</a>
+                    <a href="#">Mönstrade strumpor</a>
+
+                </div>
+            </div>
+
+        </nav>
+
+
+        <!-- Undre navigation -->
+        <nav class="nav-info" aria-label="Kontoinställningar">
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Inställningar
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-envelope"></i>
+                Kontakta oss
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logga ut
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =================================
+         HUVUDINNEHÅLL
+    ================================= -->
+
+    <main class="main-content">
+
+
+        <!-- Sökfält -->
+        <div class="search-bar">
+
+            <i class="fas fa-search"></i>
+
+            <input
+                class="search-input"
+                type="text"
+                placeholder="Sök..."
+                aria-label="Sök produkter"
+            >
+
+        </div>
+
+
+        <!-- =================================
+             HERO SEKTION
+        ================================= -->
+
+        <section class="hero">
+
+            <!-- Hero-text och knappar -->
+            <div class="content-inside">
+
+                <div class="hero-subtitle">
+                    <i class="fas fa-user"></i>
+                    Suit kläder
+                </div>
+
+                <h1>God dag Mister Bond</h1>
+
+                <p>
+                    Välkommen till din klädbutik.
+                    Här kan du hålla koll på fina kläder.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="btn btn-primary">
+                        Köp
+                    </button>
+
+                    <button class="btn btn-secondary">
+                        Se dina beställningar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero-bild -->
+            <div class="hero-image">
+
+                <img
+                    src="bilder/bild4.jpeg"
+                    alt="Elegant kostym och finskor"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PRODUKTSEKTION
+        ================================= -->
+
+        <section class="cards" aria-label="Våra produkter">
+
+
+            <!-- Produkt 1 -->
+            <article class="card">
+
+                <img src="bilder/bild1.jpeg" alt="Svarta läderskor herr">
+
+                <h2>James Bond 1970</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 2 -->
+            <article class="card">
+
+                <img src="bilder/bild2.jpeg" alt="Bruna läderskor herr">
+
+                <h2>Oscar Jacobson</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 3 -->
+            <article class="card">
+
+                <img src="bilder/bild3.jpeg" alt="Vita läderskor herr">
+
+                <h2>Stevie Wonder</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 4 -->
+            <article class="card">
+
+                <img src="bilder/bild5.jpeg" alt="Svart kostym herr">
+
+                <h2>James Bond 1970</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 5 -->
+            <article class="card">
+
+                <img src="bilder/bild6.jpeg" alt="Brun kostym herr">
+
+                <h2>Oscar Jacobson</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 6 -->
+            <article class="card">
+
+                <img src="bilder/bild7.jpeg" alt="Vit kostym herr">
+
+                <h2>Stevie Wonder</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 7 -->
+            <article class="card">
+
+                <img src="bilder/svartskjorta.jpeg" alt="Svart skjorta herr">
+
+                <h2>James Bond 1970</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 8 -->
+            <article class="card">
+
+                <img src="bilder/ljusbrund-skjorta.jpeg" alt="Ljusbrun skjorta herr">
+
+                <h2>Oscar Jacobson</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+
+            <!-- Produkt 9 -->
+            <article class="card">
+
+                <img src="bilder/vit-skjorta.jpeg" alt="Vit skjorta herr">
+
+                <h2>Stevie Wonder</h2>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Suit Kläder. Alla rättigheter förbehållna.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>

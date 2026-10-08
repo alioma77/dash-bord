@@ -1,0 +1,534 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+        Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+/* =================================
+   2. BODY OCH HUVUDLAYOUT
+================================= */
+
+body {
+    background-color: #fcedfd;
+    padding: 20px;
+    height: 100vh;
+    color: #111111;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* =================================
+   3. SIDEBAR
+================================= */
+
+.sidebar {
+    background-color: white;
+    width: 260px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+/* =================================
+   4. NAVIGATION
+================================= */
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.nav-menu a,
+.nav-info a {
+    text-decoration: none;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+
+}
+
+.nav-menu a:hover,.nav-menu a.active,.nav-info a:hover {
+    background-color: #fdedfd;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+
+
+/* =================================
+   5. HUVUDINNEHÅLL
+================================= */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   6. SEARCHBAR
+================================= */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    position: sticky;
+    top: 0px;
+    /* z-index: 100; */
+
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+
+/* =================================
+   7. HERO SECTION
+================================= */
+
+.hero {
+    background-color: #131172;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    min-height: 400px;
+}
+
+.content-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+}
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #dcdcdc;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    line-height: 1.5rem;
+}
+
+
+/* Hero-bild */
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+
+/* Hero-knappar */
+
+.hero-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: indigo;
+    color: white;
+    border: 1px solid indigo;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+
+/* =================================
+   8. PRODUKTKORT
+================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card img {
+    background-color: white;
+    width: 100%;
+    height: 330px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.card h2 {
+    color: #111111;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 15px 15px 8px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0 15px 20px;
+}
+
+
+/* =================================
+   9. KATEGORIMENY - DESKTOP
+================================= */
+
+.category-item {
+    position: relative;
+}
+
+.category-panel {
+    position: fixed;
+    top: 20px;
+    left: 300px;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 280px;
+    height: calc(100vh - 40px);
+
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-25px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s ease;
+}
+
+
+/* Visa panel vid hover på desktop */
+
+.category-item:hover .category-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.category-panel h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.category-panel a {
+    padding: 10px;
+
+    color: #111111;
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+.category-panel a:hover {
+    background-color: #fcedfd;
+}
+
+
+/* Stängningsknapp */
+
+.close-panel {
+    display: none;
+}
+
+
+/* Overlay */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 250;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+
+/* =================================
+   10. MOBILANPASSNING
+================================= */
+
+@media (max-width: 768px) {
+
+    /* Body */
+
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+        border-radius: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+
+    /* Kategorimenyn */
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-menu a {
+        padding: 10px;
+        gap: 6px;
+        font-size: 0.8rem;
+    }
+
+    /* Dölj nedre menyn på mobil */
+    .nav-info {
+        display: none;
+    }
+
+
+    /* Huvudinnehåll */
+    .main-content {
+        width: 100%;
+        overflow: visible;
+    }
+
+
+    /* Searchbar */
+    .search-bar {
+        padding: 12px 15px;
+    }
+
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 220px;
+        margin-top: 15px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+    /* Produktkort */
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+
+    /* Mobilanpassning för kategorimenyn */
+
+    .category-item {
+        position: static;
+    }
+
+    .category-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 300;
+
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+
+        padding: 30px 20px;
+
+        border-radius: 0 20px 20px 0;
+
+        transform: translateX(-100%);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+
+    /* Dölj hover-effekten på mobil */
+    .category-item:hover .category-panel {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Öppna mobilmenyn */
+    .category-item.open .category-panel {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    /* Stängningsknapp på mobil */
+
+    .close-panel {
+        display: block;
+        align-self: flex-end;
+
+        padding: 0;
+
+        background: transparent;
+
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+}
