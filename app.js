@@ -1,10 +1,7 @@
 const knapp1 = document.querySelector(".btn-primary");
 const knapp2 = document.querySelector(".btn-secondary");
-const varukorg = document.querySelector(".varukorg");
 const orderBox = document.querySelector(".order-box");
 const closeOrder = document.querySelector(".close-order");
-
-
 
 
 knapp1.addEventListener("click", function () {
@@ -13,11 +10,11 @@ knapp1.addEventListener("click", function () {
 
 knapp2.addEventListener("click", function () {
     
-    varukorg.scrollIntoView({
-        behavior: "smooth"
-    });
-
     orderBox.classList.add("active");
+
+orderBox.scrollIntoView({
+    behavior: "smooth"
+});
 
 }); 
 
@@ -30,18 +27,23 @@ closeOrder.addEventListener("click", function () {
 
 
 
-const kategorier = document.querySelectorAll(".category-item");
+
+
+
 const overlay = document.querySelector(".menu-overlay");
+const kategorier = document.querySelectorAll(".category-item");
 const stangKnappar = document.querySelectorAll(".close-panel");
 
 function stangMeny() {
 
     kategorier.forEach((kategori) => {
+        
         kategori.classList.remove("open");
     });
 
     overlay.classList.remove("active");
 }
+
 
 kategorier.forEach((kategori) => {
 
